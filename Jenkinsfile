@@ -5,22 +5,22 @@ pipeline {
             steps {
                //bat "rmdir  /s /q TicketBookingServiceJunitTesting"
                 bat "git clone https://github.com/kishancs2020/TicketBookingServiceJunitTesting.git"
-                bat "npm clean -f TicketBookingServiceJunitTesting"
+                bat "npm clean  TicketBookingServiceJunitTesting"
             }
         }
         stage('install') {
             steps {
-                bat "npm install -f TicketBookingServiceJunitTesting"
+                bat "npm install  TicketBookingServiceJunitTesting"
             }
         }
         stage('test') {
             steps {
-                bat "npm test -f TicketBookingServiceJunitTesting"
+                bat "npm test  TicketBookingServiceJunitTesting"
             }
         }
         stage('package') {
             steps {
-                bat "npm package -f TicketBookingServiceJunitTesting"
+                bat "npm package  TicketBookingServiceJunitTesting"
             }
         }
     }
